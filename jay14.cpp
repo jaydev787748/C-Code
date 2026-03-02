@@ -2,6 +2,18 @@
 #include<climits>
 using namespace std;
 
+long long factorial(int n){
+   if(n == 0) return 1;
+
+   return n * factorial(n-1);
+}
+
+void printArray(int arr[], int size){
+   for(int i=0; i<size; i++){
+      cout<<arr[i]<<endl;
+   }
+}
+
 int main(){
    string s;
    cout<<"Enter String\n";
@@ -10,6 +22,7 @@ int main(){
    for(char ch: s){
     cout<<ch<<" ";
    }
-   cout<<endl;
+
+   cout<<"Factorail of 5: "<<factorial(5)<<endl;
    return 0;
 }
